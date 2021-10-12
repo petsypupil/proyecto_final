@@ -1,0 +1,515 @@
+@import "./cards";
+@import "./footer";
+@import "./notfound";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Serif', serif;
+    height: 100vh;
+}
+header{
+    height: 100px;
+    width: 100%;
+    position:relative;
+    background-color: rgb(253, 253, 253);
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 1px 6px 0px rgba(31, 27, 27, 0.75);
+}
+
+.containerContact{
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerItem1{
+    line-height: 50px;
+}
+
+.nav-logo{
+    width: 80px;
+    margin: 10px 40px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    li{
+        margin: 0 40px;
+        line-height: 100px;
+        width: max-content;
+        a{
+            text-decoration: none;
+            color: #0749a0;
+        }
+    }
+}
+
+label{
+    font-size: 25px;
+    line-height: 100px;
+    display: none;
+    width: 26px;
+}
+
+#toggle{
+    display: none;
+}
+
+.banner{
+    background-image: url(../resources/bumblebee_flying_lovely.jpg);
+    background-size: cover;
+    height: 100vh;
+    h1{
+        line-height: 100vh;
+        font-size: 60px;
+        color: ghostwhite;
+        letter-spacing: 30px;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75); 
+    }
+}
+
+main{
+    text-align: center;
+    padding: 1% 5%;
+    h2{
+        font-size: 30px;
+        padding: 3%;
+        word-spacing: 6px;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size:18px;
+        line-height:50px;
+        word-spacing: 5px;
+    }
+}
+
+.forms{
+    h2{
+        text-align: center;
+        font-size: 30px;
+        padding: 3%;
+        word-spacing: 6px;
+        letter-spacing: 2px;
+    }
+    .contacto-texto{
+        text-align: center;
+        font-size:18px;
+        line-height:50px;
+        word-spacing: 5px;
+    }
+}
+
+.container{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+        object-position: bottom;
+        padding: 5px;
+    }
+}
+
+.table{
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.75);
+    margin-left: auto;
+    margin-right: auto;
+    min-width: auto;
+    th{
+        background-color: pink;
+        color: black;
+    }
+    th, td{
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    label{
+        font-size: 20px;
+        line-height: 60px;
+        display: block;
+        cursor: pointer;
+    }
+    header{
+        height: 60px;
+        width: 100%;
+        position:fixed;
+        background-color: rgba(255, 255, 255, 0.664);
+        top: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav{
+        width: 60px;
+    }
+    nav ul{
+        flex-direction: column;
+        background-color: #0749a0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        right: 0.2%;
+        align-content: center;
+        li{
+            margin: auto;
+            a{
+                color: ghostwhite;
+            }
+        }
+    }
+    #toggle:checked + ul{
+        display: block;
+    }
+    .banner{
+        background-image: url(../resources/bee_lockscreen.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        h1{
+            padding: 70px;
+            line-height: 20vh;
+            font-size: 50px;
+            color: ghostwhite;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75); 
+        }
+    }
+
+    .nav-logo{
+        width: 50px;
+        margin: 7px 20px;
+    }
+
+    .articulo{
+        text-align: center;
+        padding: 2%;
+        h2{
+            font-size: 20px;
+            padding: 2%;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size:12px;
+            line-height:30px;
+            word-spacing: 2px;
+        }
+    }
+    
+    
+    .cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .card-body{
+            width: 80vw;
+            height: 400px;
+            margin: 1%;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.589);
+            border-radius: 10px;
+            h3{
+                font-size: 20px; 
+                padding: 4%;
+                text-align: center;
+            }
+            .card-text{
+                font-size: 12px;
+                margin: 4%;
+                padding: 4%;
+            }
+            .card-image{
+                background-color: ghostwhite;
+                background-size: cover; 
+                height: 150px;
+            }
+            a{
+                display: block;
+                padding: 1%;
+                background-color: rgb(245, 245, 55);
+                padding: 15px 20px;
+                margin: 20px 50px;
+                color: rgb(2, 2, 2);
+            }
+            &:hover{
+                transform: scale(1.03); 
+                box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.589);
+                transition: all 1s; 
+            }
+        }
+    }
+
+    footer {
+        background-color: #0749a0;
+        padding: 5%;
+        height: 80px;
+    }
+    main{
+        text-align: center;
+        padding: 0.5% 3%;
+        margin-top: 80px;
+        h2{
+            font-size: 20px;
+            padding: 1%;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size:12px;
+            line-height:20px;
+            word-spacing: 1px;
+        }
+    }
+    .container{
+        display: flex;
+        max-width: 500px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            width: 350px;
+            height: 200px;
+            object-fit: cover;
+            object-position: bottom;
+            padding: 2px;
+        }
+    }
+
+    .table{
+        font-size: 8px;
+    }
+
+    .forms{
+        margin: 0px 5px;
+        h2{
+            margin-top: 80px;
+            text-align: center;
+            font-size: 20px;
+            padding: 1%;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        .contacto-texto{
+            text-align: center;
+            font-size:12px;
+            line-height:20px;
+            word-spacing: 1px;
+        }
+        label{
+            display: none;
+        }
+        .containerItem2{
+            img{
+                display: none;
+            }
+        }
+    }
+
+    .nosotros-img{
+        width: 90vw;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    label{
+        font-size: 20px;
+        line-height: 60px;
+        display: block;
+        cursor: pointer;
+    }
+    header{
+        height: 60px;
+        width: 100%;
+        position:fixed;
+        background-color: rgba(255, 255, 255, 0.664);
+        top: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav{
+        width: 60px;
+    }
+    nav ul{
+        flex-direction: column;
+        background-color: #0749a0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        right: 0.2%;
+        align-content: center;
+        li{
+            margin: auto;
+            a{
+                color: ghostwhite;
+            }
+        }
+    }
+    #toggle:checked + ul{
+        display: block;
+    }
+    .banner{
+        background-image: url(../resources/bee_lockscreen.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        h1{
+            padding: 70px;
+            line-height: 20vh;
+            font-size: 50px;
+            color: ghostwhite;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75); 
+        }
+    }
+
+    .nav-logo{
+        width: 50px;
+        margin: 7px 20px;
+    }
+
+    .articulo{
+        text-align: center;
+        padding: 2%;
+        h2{
+            font-size: 20px;
+            padding: 2%;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size:12px;
+            line-height:30px;
+            word-spacing: 2px;
+        }
+    }
+    
+    
+    .cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .card-body{
+            width: 80vw;
+            height: 400px;
+            margin: 1%;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.589);
+            border-radius: 10px;
+            h3{
+                font-size: 20px; 
+                padding: 4%;
+                text-align: center;
+            }
+            .card-text{
+                font-size: 12px;
+                margin: 4%;
+                padding: 4%;
+            }
+            .card-image{
+                background-color: ghostwhite;
+                background-size: cover; 
+                height: 150px;
+            }
+            a{
+                display: block;
+                padding: 1%;
+                background-color: rgb(245, 245, 55);
+                padding: 15px 20px;
+                margin: 20px 50px;
+                color: rgb(2, 2, 2);
+            }
+            &:hover{
+                transform: scale(1.03); 
+                box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.589);
+                transition: all 1s; 
+            }
+        }
+    }
+
+    footer {
+        background-color: #0749a0;
+        padding: 5%;
+        height: 80px;
+    }
+    main{
+        text-align: center;
+        padding: 0.5% 3%;
+        margin-top: 80px;
+        h2{
+            font-size: 20px;
+            padding: 1%;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size:12px;
+            line-height:20px;
+            word-spacing: 1px;
+        }
+    }
+    .container{
+        display: flex;
+        max-width: 500px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            width: 350px;
+            height: 200px;
+            object-fit: cover;
+            object-position: bottom;
+            padding: 2px;
+        }
+    }
+
+    .table{
+        font-size: 8px;
+    }
+
+    .forms{
+        margin: 0px 5px;
+        h2{
+            margin-top: 80px;
+            text-align: center;
+            font-size: 20px;
+            padding: 1%;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        .contacto-texto{
+            text-align: center;
+            font-size:12px;
+            line-height:20px;
+            word-spacing: 1px;
+        }
+        label{
+            display: none;
+        }
+        .containerItem2{
+            img{
+                display: none;
+            }
+        }
+    }
+
+    .nosotros-img{
+        width: 90vw;
+    }
+
+}

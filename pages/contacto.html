@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/52f20ab057.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="save the bees, contacto, noticias, abejas">
+    <meta name="description" content="No te pierdas de ninguna de nuestras noticias, se el primero en enterarte.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img class="nav-logo" src="../resources/Icon.png" alt="logosavethebees">
+        </a>
+        <nav class="navbar">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle"/>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html">Home</a></li>
+                <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a href="./comunidad.html">Comunidad</a></li>
+                <li class="nav-item"><a href="./productos.html">Productos</a></li>
+                <li class="nav-item"><a href="./nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="forms">
+        <h2>Contacto</h2>
+        <p class="contacto-texto">Complete el siguiente formulario para conectarse con el equipo de Save the bees.</p>
+        <div class="containerContact">
+            <div class="containerItem1">
+            <form method="GET">
+                <p>Nombre</p>
+                <label for="Nombre">Nombre</label>
+                <input type="text" id="Nombre" placeholder="Ejem:Marina">
+                <br/>
+                <!-- Email -->
+                <p>Email</p>
+                <label for="Email">Email</label>
+                <input type="text" id="Email" placeholder="Marina@hotmail.com">
+                <br/>
+                <!-- Region menu desplegable-->
+                <span class="contactoText">Region</span>
+                <select name="Region" id="Desplegable">
+                <option value="America"> America</option>
+                <option value="Europa"> Europa</option>
+                <option value="Asia"> Asia</option> 
+                </select>
+                <br/>
+                <!-- Mensaje con textarea-->
+                <p class="contactoText"> Mensaje</p>
+                <textarea rows="20" cols="50"> </textarea>
+                <br/>
+                <!-- Radio con Si o no-->
+                <p class="contactoText"> ¿le gustaria recibir noticias acerca de Savethebees?</p>
+                <input type="radio" name="seleccion" value="Si"> Si
+                <input type="radio" name="seleccion" value="No"> No
+                <br/>
+                <!-- boton submit-->
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </div>  
+            <div class="containerItem2">
+                <img src="../resources/Simple-Location-Picker.png">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-iconos">
+            <ul class="footer-lista">
+                <li> <a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li> <a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

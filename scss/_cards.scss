@@ -1,0 +1,61 @@
+.card-title{
+    text-align: center;
+    font-size: 30px;
+    padding: 3%;
+    word-spacing: 6px;
+    letter-spacing: 2px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    .card-body{
+        width: 30%;
+        height: 500px;
+        margin: 3%;
+        border-radius: 20px;
+        h3{
+            font-size: 25px; 
+            padding: 4%;
+            text-align: center;
+        }
+        .card-text{
+            font-size: 16px;
+            margin: 4%;
+            padding: 4%;
+        }
+        .card-image{
+            background-color: ghostwhite;
+            background-size: cover; 
+            height: 200px;
+        }
+        a{
+            display: block;
+            padding: 1%;
+            background-color: rgb(245, 245, 55);
+            padding: 15px 20px;
+            margin: 20px 50px;
+            color: rgb(2, 2, 2);
+        }
+        &:hover{
+            transform: scale(1.03); 
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.589);
+            transition: all 1s; 
+        }
+    }
+}
+
+.img1{
+    background-color: blueviolet;
+    background-image: url(../resources/everyone.jpg);
+    border-radius: 20px 20px 0px 0px; 
+}
+.img2{
+    background-color: blueviolet;
+    background-image: url(../resources/happy_womanbeekeeper.jpeg);
+    border-radius: 20px 20px 0px 0px;
+}
+.img3{
+    background-color: blueviolet;
+    background-image: url(../resources/Donations.jpg);
+    border-radius:20px 20px 0px 0px; 
+}
